@@ -21,10 +21,11 @@ module OneLogin
       attr_accessor :protocol_binding
       attr_accessor :attributes_index
       attr_accessor :force_authn
+      attr_accessor :strict_xml_validation
 
       private
 
-      DEFAULTS = {:compress_request => true, :double_quote_xml_attribute_values => false}
+      DEFAULTS = {:compress_request => true, :double_quote_xml_attribute_values => false, :strict_xml_validation => false}
     end
   end
 end
