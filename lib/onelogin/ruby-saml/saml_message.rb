@@ -76,8 +76,10 @@ module OneLogin
         end
 
         SamlMessage.schema.validate(xml).map do |error|
-          return false if soft
-          raise ValidationError.new("#{error.message}\n\n#{xml.to_s}")
+          unless settings.ignore_non_fatal_xml_structure_errors && !error.fatal?
+            return false if soft
+            raise ValidationError.new("#{error.message}\n\n#{xml.to_s}")
+          end
         end
       end
 

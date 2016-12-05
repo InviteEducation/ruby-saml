@@ -163,7 +163,7 @@ module OneLogin
           :signature_method         => XMLSecurity::Document::RSA_SHA1
         }.freeze,
         :double_quote_xml_attribute_values         => false,
-        :strict_xml_validation                     => false
+        :ignore_non_fatal_xml_structure_errors     => true
       }.freeze
     end
   end
