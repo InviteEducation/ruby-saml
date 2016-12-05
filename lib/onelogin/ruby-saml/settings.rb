@@ -44,7 +44,7 @@ module OneLogin
       attr_accessor :protocol_binding
       attr_accessor :attributes_index
       attr_accessor :force_authn
-      attr_accessor :strict_xml_validation
+      attr_accessor :ignore_non_fatal_xml_structure_errors
       attr_accessor :certificate
       attr_accessor :private_key
       attr_accessor :authn_context
